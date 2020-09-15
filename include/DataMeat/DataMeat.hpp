@@ -2,15 +2,12 @@
 #define __DATAMEAT_H__
 
 #include "Node.hpp"
-#include "Iterator.hpp"
-#include <map>
 #include <string>
 
 template<typename T>
 class DataMeat {
 private:
     typedef unsigned long ulong;
-    typedef std::map<std::string, std::string> nMap;
 private:
     Node<T>* _root;
     ulong _size;
@@ -19,7 +16,6 @@ public:
     void push(std::string const&, T);
     bool remove(std::string const&);
     bool exists(std::string const&);
-    nMap search(std::string const&);
     ulong getSize() const { return _size; }
     T operator[](std::string const&);
     ~DataMeat() {}
@@ -51,11 +47,6 @@ bool DataMeat<T>::remove(std::string const& key) {
 template<typename T>
 bool DataMeat<T>::exists(std::string const& key) {
 	return true;
-}
-
-template<typename T>
-std::map<std::string, std::string> DataMeat<T>::search(std::string const& key) {
-	return std::map<std::string, std::string>();
 }
 
 template<typename T>

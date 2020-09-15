@@ -1,8 +1,6 @@
 #ifndef __DYNAMICARRAY_H__
 #define __DYNAMICARRAY_H__
 
-#include <iostream>
-
 #define DEFAULT_SIZE 26
 
 template<typename T>

@@ -1,9 +1,6 @@
 #include <DataMeat/DataMeat.hpp>
 
 #include <iostream>
-#include <string>
-#include <time.h>
-#include <stdio.h>
 
 int main(int argc, char** argv) {
 	
